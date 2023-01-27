@@ -1,0 +1,41 @@
+package com.jspshop.repository;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.jspshop.domain.Member;
+import com.jspshop.exception.MemberException;
+import com.jspshop.mybatis.MybatisConfig;
+
+public class MemberDAO {
+	MybatisConfig mybatisConfig = MybatisConfig.getInstance();
+	
+	// 회원 1명 정보수정
+	public void update(int member_idx) {
+		SqlSession session = mybatisConfig.getSqlSession();
+		if(session.insert("Member.udate", member_idx) < 0) {
+		
+	}
+	
+	
+	// 전체 회원 조회
+	public List selectAll() {
+		SqlSession session = mybatisConfig.getSqlSession();
+		List<Member> list = session.selectList("Member.selectAll");
+		mybatisConfig.release(session);
+		
+		return list;
+	}
+	
+	// 회원 1명 등록
+	public void insert(Member member) throws MemberException{
+		SqlSession session = mybatisConfig.getSqlSession();
+		if(session.insert("Member.insert", member) < 0) {
+			throw new MemberException("회원 등록실패");
+		}
+		//성공 시 커밋 후 세션 반납
+		session.commit();
+		mybatisConfig.release(session);
+	}
+}

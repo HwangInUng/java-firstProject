@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.jspshop.domain.Admin" alias="Admin" />
+		<typeAlias type="com.jspshop.domain.Category" alias="Category" />
+		<typeAlias type="com.jspshop.domain.Product" alias="Product" />
+		<typeAlias type="com.jspshop.domain.Color" alias="Color" />
+		<typeAlias type="com.jspshop.domain.Psize" alias="Psize" />
+		<typeAlias type="com.jspshop.domain.Pimg" alias="Pimg" />
+		<typeAlias type="com.jspshop.domain.Member" alias="Member" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="data_source" value="java:comp/env/jdbc/mysql" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/resources/AdminMapper.xml"/>
+		<mapper resource="com/resources/CategoryMapper.xml"/>
+		<mapper resource="com/resources/ProductMapper.xml"/>
+		<mapper resource="com/resources/ColorMapper.xml"/>
+		<mapper resource="com/resources/PsizeMapper.xml"/>
+		<mapper resource="com/resources/PimgMapper.xml"/>
+	</mappers>
+</configuration>

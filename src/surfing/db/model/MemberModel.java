@@ -8,7 +8,7 @@ import javax.swing.table.AbstractTableModel;
 import surfing.db.domain.member.SurfMember;
 
 public class MemberModel extends AbstractTableModel {
-	String[] columnName = { "회원번호", "회원ID", "회원명", "성별", "전화번호", "SNS아이디", "경력", "등록일" };
+	private String[] columnName = { "회원번호", "회원ID", "회원명", "성별", "전화번호", "SNS아이디", "경력", "등록일" };
 	// 생성 후 MemberPanel에서 메서드를 통해 정의
 	public List<SurfMember> memberList = new ArrayList<SurfMember>();
 

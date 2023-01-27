@@ -1,0 +1,12 @@
+package com.jspshop.domain;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Pimg {
+	private int pimg_idx;
+	private Product product;
+	private String filename;
+}

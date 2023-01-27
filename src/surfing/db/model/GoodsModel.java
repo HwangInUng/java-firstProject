@@ -9,7 +9,7 @@ import javax.swing.table.AbstractTableModel;
 import surfing.db.domain.product.Goods;
 
 public class GoodsModel extends AbstractTableModel {
-	String[] columnName = { "상품번호", "상위구분", "하위구분", "상품명", "브랜드", "가격", "재고" };
+	private String[] columnName = { "상품번호", "상위구분", "하위구분", "상품명", "브랜드", "가격", "재고" };
 	public List<Goods> goodsList = new ArrayList<Goods>();
 
 	@Override

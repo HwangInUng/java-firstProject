@@ -1,0 +1,20 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=/Users/inung/eclipse/jee-2022-09/Eclipse.app/Contents/Eclipse/
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=/Users/inung/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar
+org.eclipse.jdt.core.classpathVariable.M2_REPO=/Users/inung/.m2/repository
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=11
+org.eclipse.jdt.core.compiler.compliance=11
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.release=enabled
+org.eclipse.jdt.core.compiler.source=11
+org.eclipse.jdt.core.timeoutForParameterNameFromAttachedJavadoc=50
+org.eclipse.jdt.core.userLibrary.Board\ lib=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/MybatisGallery/src/main/webapp/WEB-INF/lib/ojdbc8.jar"/>\n</userlibrary>\n
+org.eclipse.jdt.core.userLibrary.Gallery\ lib=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/GalleryProject/src/main/webapp/WEB-INF/lib/cos.jar"/>\n\t<archive path\="/GalleryProject/src/main/webapp/WEB-INF/lib/ojdbc8.jar"/>\n</userlibrary>\n
+org.eclipse.jdt.core.userLibrary.News\ lib=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/CommentApp/src/main/webapp/WEB-INF/lib/ojdbc8.jar"/>\n</userlibrary>\n
+org.eclipse.jdt.core.userLibrary.Notice\ lib=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/ReactNotice/src/main/webapp/WEB-INF/lib/ojdbc8.jar"/>\n</userlibrary>\n

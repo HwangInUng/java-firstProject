@@ -11,7 +11,7 @@ import surfing.db.domain.product.TopItem;
 import surfing.db.util.DBManager;
 
 public class SubItemDAO {
-	DBManager dbManager = DBManager.getInstance();
+	private DBManager dbManager = DBManager.getInstance();
 	
 	// item명과 1:1대응하는 idx값 반환
 	public int selectSubItemIdx(String name) {

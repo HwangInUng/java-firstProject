@@ -1,28 +1,30 @@
 package surfing.gui;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.LineBorder;
 
 import surfing.db.repository.ShopAdminDAO;
 import surfing.db.util.DBManager;
+import surfing.gui.login.LoginPanel;
+import surfing.gui.main.MainPanel;
+import surfing.gui.member.MemberPanel;
+import surfing.gui.member.RidingPanel;
+import surfing.gui.product.ProductPanel;
+import surfing.gui.reservation.ReservationPanel;
 
 public class SurfingApp extends JFrame {
-	DBManager dbManager = DBManager.getInstance();
-	ShopAdminDAO shopAdminDAO;
+	public DBManager dbManager = DBManager.getInstance();
+	public ShopAdminDAO shopAdminDAO;
 
 	// 프레임 필드
-	JPanel container;  //JFrame의 센터 영역을 담당할 패널
-	MenuPanel menuPanel; //JFrame의 서측 영역을 담당할 패널
-	Page[] panelList = new Page[6];
+	public JPanel container;  //JFrame의 센터 영역을 담당할 패널
+	public MenuPanel menuPanel; //JFrame의 서측 영역을 담당할 패널
+	public Page[] panelList = new Page[6];
 
 	// 기능별 페이지 상수
 	public static final int LOGINPAGE = 0;

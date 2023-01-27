@@ -12,7 +12,7 @@ import surfing.db.domain.product.TopItem;
 import surfing.db.util.DBManager;
 
 public class GoodsDAO {
-	DBManager dbManager = DBManager.getInstance();
+	private DBManager dbManager = DBManager.getInstance();
 
 	// 레코드 1건 추가
 	public int insert(Goods goods) {

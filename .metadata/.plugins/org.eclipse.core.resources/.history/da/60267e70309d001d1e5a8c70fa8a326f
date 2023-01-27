@@ -1,0 +1,29 @@
+<%@page import="com.jspshop.util.Msg"%>
+<%@page import="com.jspshop.exception.MemberException"%>
+<%@page import="com.jspshop.domain.Member"%>
+<%@page import="com.jspshop.repository.MemberDAO"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%!
+	MemberDAO memberDAO = new MemberDAO();
+%>
+
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	//empty DTO 생성
+	Member member = new Member();
+	member.setMember_id(request.getParameter("member_id2"));
+	member.setMember_pass(request.getParameter("member_pass2"));
+	member.setMember_name(request.getParameter("member_name2"));
+	member.setEmail(request.getParameter("email2"));
+	
+	Msg msg = new Msg();
+	try{
+		memberDAO.update(Integer.parseInt(request.getParameter("member_idx")));
+		
+		
+	} catch(MemberException e){
+		
+	}
+	
+%>

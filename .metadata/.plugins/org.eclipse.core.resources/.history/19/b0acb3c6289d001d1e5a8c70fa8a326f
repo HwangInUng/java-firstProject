@@ -1,0 +1,27 @@
+<%@page import="com.jspshop.util.Msg"%>
+<%@page import="com.jspshop.domain.Member"%>
+<%@page import="com.jspshop.repository.MemberDAO"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%!
+	MemberDAO memberDAO = new MemberDAO();
+%>
+
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	Member member = new Member();
+	member.setMember_id(request.getParameter("member_name"));
+	member.setMember_pass(request.getParameter("member_pass"));
+	member.setMember_name(request.getParameter("member_name"));
+	member.setEmail(request.getParameter("email"));
+	
+	try{
+		memberDAO.insert(member);
+		
+	}
+	
+	Msg msg = new Msg();
+	msg.setCode(code)
+	
+	out.print();
+%>

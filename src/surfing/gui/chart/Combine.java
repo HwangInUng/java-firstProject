@@ -22,9 +22,9 @@ import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 public class Combine extends JPanel {
-	CategoryDataset dataset1, dataset2;
-	JFreeChart chart;
-	CategoryPlot plot;
+	private CategoryDataset dataset1, dataset2;
+	private JFreeChart chart;
+	private CategoryPlot plot;
 
 	public Combine() {
 		setPreferredSize(new Dimension(720, 370));

@@ -11,7 +11,7 @@ import surfing.db.domain.member.SurfMember;
 import surfing.db.util.DBManager;
 
 public class RidingRecordDAO {
-	DBManager dbManager = DBManager.getInstance();
+	private DBManager dbManager = DBManager.getInstance();
 	
 	// 선택한 레코드 1건을 조회
 	public RidingRecord select(int record_idx) {

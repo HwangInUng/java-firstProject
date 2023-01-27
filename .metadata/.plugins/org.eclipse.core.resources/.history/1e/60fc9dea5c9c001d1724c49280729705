@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Product">
+	<resultMap type="Product" id="productMap">
+		<id column="product_idx" property="product_idx" />
+		<result column="product_name" property="product_name" />
+		<result column="brand" property="brand" />
+		<result column="price" property="price" />
+		<result column="discount" property="discount" />
+		<result column="detail" property="detail" />
+		<!-- <collection column="product_idx" javaType="java.util.List" ofType="Color" property="colorList" select="Color.selectAll"/> <collection column="product_idx" javaType="java.util.List" ofType="Psize" property="psizeList" select="Psize.selectAll"/> <collection column="product_idx" javaType="java.util.List" ofType="Pimg" property="pimgList" select="Pimg.selectAll"/> -->
+		<association column="category_idx" property="category" select="Category.selectName" />
+	</resultMap>
+
+	<insert id="insert" parameterType="Product">
+		insert into product(category_idx, product_name, brand, price, discount, detail)
+		values(#{category.category_idx}, #{product_name}, #{brand}, #{price}, #{discount}, #{detail})
+		<selectKey keyColumn="product_idx" keyProperty="product_idx" resultType="int" order="AFTER">
+			select last_insert_id()
+		</selectKey>
+	</insert>
+
+	<select id="selectAll" resultMap="productMap">
+		select * from product order by product_idx desc
+	</select>
+
+	<!--검색내용이 있는 경우에만 실행 -->
+	<select id="selectBySearch" resultMap="productMap" parameterType="java.util.Map">
+		select * from product
+		<if test="keyword != null">
+			where ${category} like '%${keyword}%'
+		</if>
+		order by product_idx desc
+	</select>
+</mapper>

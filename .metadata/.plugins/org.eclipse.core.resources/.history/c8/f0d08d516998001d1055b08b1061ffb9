@@ -1,0 +1,10 @@
+package com.jspshop.domain;
+
+import lombok.Data;
+import lombok.Getter;
+
+@Getter
+public class Category {
+	private int category_idx;
+	private String category_name;
+}

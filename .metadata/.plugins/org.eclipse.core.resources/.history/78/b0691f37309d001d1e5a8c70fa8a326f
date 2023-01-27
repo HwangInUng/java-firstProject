@@ -1,0 +1,17 @@
+<%@page import="com.jspshop.domain.Member"%>
+<%@page import="com.jspshop.repository.MemberDAO"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%!
+	MemberDAO memberDAO = new MemberDAO();
+%>
+
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	//empty DTO 생성
+	Member member = new Member();
+	member.setMember_id(request.getParameter("member_id2"));
+	member.setMember_pass(request.getParameter("member_id2"));
+	member.setMember_name(request.getParameter("member_id2"));
+	member.setEmail(request.getParameter("member_id2"));
+%>

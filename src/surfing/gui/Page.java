@@ -8,10 +8,10 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 public class Page extends JPanel{
-	SurfingApp app;
+	public SurfingApp app;
 	
 	//최상위 객체가 보유하여 필요 시 부착하여 사용할 수 있도록 보유
-	JPanel container, p_north, p_south;
+	public JPanel container, p_north, p_south;
 	
 	//각 패널에서 사용할 Border 객체 보유
 	public static final Border PANEL_LINEBORDER = new LineBorder(new Color(31, 140, 255), 2, true);

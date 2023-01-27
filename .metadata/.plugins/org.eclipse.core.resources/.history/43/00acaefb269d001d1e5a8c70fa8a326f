@@ -1,0 +1,5 @@
+package com.jspshop.exception;
+
+public class MemberException {
+
+}

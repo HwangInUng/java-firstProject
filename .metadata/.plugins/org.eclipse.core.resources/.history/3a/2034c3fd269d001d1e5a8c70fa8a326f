@@ -1,0 +1,7 @@
+package com.jspshop.exception;
+
+public class MemberException {
+	public ColorException(String msg) {
+		super(msg);
+	}
+}

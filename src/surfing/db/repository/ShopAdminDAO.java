@@ -12,8 +12,8 @@ import surfing.gui.SurfingApp;
 import surfing.util.StringUtil;
 
 public class ShopAdminDAO {
-	DBManager dbManager = DBManager.getInstance();
-	SurfingApp app;
+	private DBManager dbManager = DBManager.getInstance();
+	private SurfingApp app;
 
 	public ShopAdminDAO(SurfingApp app) {
 		this.app = app;

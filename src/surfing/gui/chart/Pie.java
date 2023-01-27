@@ -18,10 +18,10 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 
 public class Pie extends JPanel{
-	PieDataset dataset;
-	JFreeChart pie;
-	PiePlot plot;
-	PieSectionLabelGenerator labelGenerator;
+	private PieDataset dataset;
+	private JFreeChart pie;
+	private PiePlot plot;
+	private PieSectionLabelGenerator labelGenerator;
 	
 	public Pie() {
 		

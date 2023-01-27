@@ -10,7 +10,7 @@ import surfing.db.domain.Total;
 import surfing.db.util.DBManager;
 
 public class TotalDAO {
-	DBManager dbManager = DBManager.getInstance();
+	private DBManager dbManager = DBManager.getInstance();
 	
 	//매출형태별 총 누적합을 반환
 	public List selectSaleNum() {

@@ -12,14 +12,14 @@ import org.knowm.xchart.PieChartBuilder;
 import org.knowm.xchart.XChartPanel;
 import org.knowm.xchart.style.PieStyler.LabelType;
 
-import surfing.gui.MainPanel;
 import surfing.gui.Page;
+import surfing.gui.main.MainPanel;
 
 public class Pie2 extends JPanel {
-	MainPanel mainPanel;
+	private MainPanel mainPanel;
 	
-	PieChart pie;
-	XChartPanel<PieChart> panel;
+	private PieChart pie;
+	private XChartPanel<PieChart> panel;
 	
 	//각 차트의 데이터를 추가할 리스트보유
 	public List<Integer> trainingNum = new ArrayList<Integer>();

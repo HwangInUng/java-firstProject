@@ -1,0 +1,11 @@
+package com.jspshop.domain;
+
+public class Member {
+	private int member_idx;
+	private String member_id;
+	private String member_pass;
+	private String member_name;
+	private String email;
+	private String addr1;
+	private String addr2;
+}

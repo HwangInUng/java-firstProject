@@ -1,6 +1,5 @@
 package surfing.gui;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Label;
@@ -10,20 +9,21 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.LineBorder;
+
+import surfing.gui.login.LoginPanel;
 
 //Page 상속을 통해 멤버로 MainApp 보유
 public class MenuPanel extends JPanel {
-	SurfingApp app;
+	public SurfingApp app;
 	// 로그인 정보 출력필드
-	JPanel loginInfo;
-	JLabel la_id;
-	JLabel la_accessTime;
-	JButton bt_logout;
+	private JPanel loginInfo;
+	public JLabel la_id;
+	public JLabel la_accessTime;
+	private JButton bt_logout;
 
 	// 메뉴필드
-	JPanel menuInfo;
-	MenuLabel[] labelList = new MenuLabel[5];
+	private JPanel menuInfo;
+	private MenuLabel[] labelList = new MenuLabel[5];
 
 	public MenuPanel(SurfingApp app) {
 		this.app = app;

@@ -11,7 +11,7 @@ import surfing.db.domain.reservation.Step;
 import surfing.db.util.DBManager;
 
 public class ReservationDAO {
-	DBManager dbManager = DBManager.getInstance();
+	private DBManager dbManager = DBManager.getInstance();
 	
 	// 해당 일의 데이터 조회
 	public List selectDay(String currentDate) {

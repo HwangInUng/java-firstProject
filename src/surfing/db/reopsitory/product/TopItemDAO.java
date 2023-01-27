@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import surfing.db.util.DBManager;
 
 public class TopItemDAO {
-	DBManager dbManager = DBManager.getInstance();
+	private DBManager dbManager = DBManager.getInstance();
 	
 	// name을 매개로 받아 idx 값 반환
 	public int getIdx(String name) {

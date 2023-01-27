@@ -17,13 +17,13 @@ import org.knowm.xchart.style.Styler.YAxisPosition;
 import org.knowm.xchart.style.markers.SeriesMarkers;
 
 import surfing.db.domain.Total;
-import surfing.gui.MainPanel;
 import surfing.gui.Page;
+import surfing.gui.main.MainPanel;
 
 public class TotalChart extends JPanel {
-	MainPanel mainPanel;
-	CategoryChart chart;
-	XChartPanel<CategoryChart> panel;
+	private MainPanel mainPanel;
+	private CategoryChart chart;
+	private XChartPanel<CategoryChart> panel;
 
 	int[] monthName = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 

@@ -9,7 +9,7 @@ import surfing.db.domain.member.SurfMember;
 import surfing.db.util.DBManager;
 
 public class ProfileDAO {
-	DBManager dbManager = DBManager.getInstance();
+	private DBManager dbManager = DBManager.getInstance();
 
 	// 현재 레코드 정보를 수정(트랜잭션 수행 적용메서드)
 	public int updateCurrentRecord(Profile member) throws Exception {

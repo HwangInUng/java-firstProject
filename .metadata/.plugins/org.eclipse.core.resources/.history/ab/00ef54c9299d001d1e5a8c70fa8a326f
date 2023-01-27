@@ -1,0 +1,135 @@
+<!-- 회원의 리스트를 출력할 html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Insert title here</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+
+<body>
+	<div class="container border mt-3">
+		<div class="row">
+			<!-- 입력 폼 영역 -->
+			<div class="col-md-2 pb-2">
+				<form id="registForm">
+					<div class="form-group">
+						<label for="member_id">ID:</label>
+						<input type="text" class="form-control" placeholder="Enter ID" name="member_id">
+					</div>
+					<div class="form-group">
+						<label for="member_pass">Password:</label>
+						<input type="password" class="form-control" placeholder="Enter password" name="member_pass">
+					</div>
+					<div class="form-group">
+						<label for="member_name">Name:</label>
+						<input type="text" class="form-control" placeholder="Enter Name" name="member_name">
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="text" class="form-control" placeholder="Enter Email" name="email">
+					</div>
+					<div class="form-group text-center">
+						<button type="button" class="btn btn-dark" id="regist">회원가입</button>
+					</div>
+				</form>
+			</div>
+			<!-- /.입력 폼 영역 -->
+
+			<!-- 테이블 영역 -->
+			<div class="col-md-8 border">
+				<table class="table table-dark table-striped m-0">
+					<thead>
+						<tr>
+							<th>회원번호</th>
+							<th>회원ID</th>
+							<th>회원명</th>
+							<th>E-Mail</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<!-- /.테이블 영역 -->
+
+			<!-- 수정 및 삭제 영역 -->
+			<div class="col-md-2">
+				<form id="editForm">
+					<div class="form-group">
+						<label for="member_id2">ID:</label>
+						<input type="text" class="form-control" placeholder="Enter ID" name="member_id2">
+					</div>
+					<div class="form-group">
+						<label for="member_pass2">Password:</label>
+						<input type="password" class="form-control" placeholder="Enter password" name="member_pass2">
+					</div>
+					<div class="form-group">
+						<label for="member_name2">Name:</label>
+						<input type="text" class="form-control" placeholder="Enter Name" name="member_name2">
+					</div>
+					<div class="form-group">
+						<label for="email2">Email:</label>
+						<input type="text" class="form-control" placeholder="Enter Email" name="email2">
+					</div>
+					<div class="form-group text-center">
+						<button type="button" class="btn btn-dark" id="edit">수정</button>
+						<button type="button" class="btn btn-dark" id="del">삭제</button>
+					</div>
+				</form>
+			</div>
+			<!-- /.수정 및 삭제영역 -->
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	//입력폼 초기화
+	function reset(){
+		form.reset();
+	}
+
+	// 회원 1명 등록 메서드
+	function regist(){
+		let registform = $("#registForm").serialize();
+
+		$.ajax({
+			type:"POST",
+			url:"/vue/member/regist.jsp",
+			data: registform,
+			success:function(result, status, xhr){
+				alert(result.msg);
+				reset();
+			}
+		});
+	}
+
+	$(function(){
+		$("#regist").on("click", function(){
+			regist();
+		});
+		$("#edit").on("click", function(){
+
+		});
+		$("#del").on("click", function(){
+
+		});
+	})
+</script>
+</html>
