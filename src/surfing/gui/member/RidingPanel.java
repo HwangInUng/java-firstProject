@@ -165,7 +165,7 @@ public class RidingPanel extends Page {
 		// 이미지 생성
 		Image image = createImage(ridingRecord.getImage_name());
 
-		Record record = new Record(app, this, image, ridingRecord);
+		Record record = new Record(this, image, ridingRecord);
 		p_record.add(record);
 	}
 

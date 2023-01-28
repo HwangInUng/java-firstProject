@@ -18,7 +18,6 @@ import surfing.gui.SurfingApp;
 
 //라이딩 기록 1건에 대한 정보를 담을 패널
 public class Record extends JPanel {
-	private SurfingApp app;
 	private RidingPanel ridingPanel;
 
 	private JLabel la_ridingImage;
@@ -39,8 +38,7 @@ public class Record extends JPanel {
 	// record_idx 보유
 	int record_idx;
 
-	public Record(SurfingApp app, RidingPanel ridingPanel, Image image, RidingRecord ridingRecord) {
-		this.app = app;
+	public Record(RidingPanel ridingPanel, Image image, RidingRecord ridingRecord) {
 		this.image = image;
 		this.record_idx = ridingRecord.getRecord_idx();
 		this.ridingPanel = ridingPanel;
