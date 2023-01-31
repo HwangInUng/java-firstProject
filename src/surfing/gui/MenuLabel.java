@@ -8,8 +8,8 @@ import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
 
 public class MenuLabel extends JLabel{
-	MenuPanel menuPanel;
-	int index;
+	private MenuPanel menuPanel;
+	private int index;
 	
 	public MenuLabel(String menuName, int n, MenuPanel menuPanel, int index) {
 		super(menuName, n);
